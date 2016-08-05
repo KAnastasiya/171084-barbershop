@@ -7,3 +7,8 @@ Thumbs.db
 *.psd
 *.ai
 *.pdf
+
+package.json
+gulpfile.js
+src/
+html-backup/
