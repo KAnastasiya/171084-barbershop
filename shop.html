@@ -16,7 +16,7 @@
         <nav class="page-navigation">
           <ul class="page-navigation__list">
             <li class="page-navigation__item">
-              <a class="page-navigation__link"href="#">Информация</a>
+              <a class="page-navigation__link" href="#">Информация</a>
             </li>
             <li class="page-navigation__item">
               <a class="page-navigation__link" href="#">Новости</a>
@@ -25,7 +25,7 @@
               <a class="page-navigation__link" href="pricelist.html">Прайс-лист</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link--active" href="shop.html">Магазин</a>
+              <a class="page-navigation__link">Магазин</a>
             </li>
             <li class="page-navigation__item">
               <a class="page-navigation__link" href="#">Контакты</a>
@@ -42,7 +42,9 @@
     <main class="container">
       <h1 class="main-header">Средства для ухода</h1>
       <ul class="page-breadcrumbs">
-        <li class="page-breadcrumbs__item">Главная</li>
+        <li class="page-breadcrumbs__item">
+          <a class="page-breadcrumbs__link" href='index.html'> Главная</a>
+        </li>
         <li class="page-breadcrumbs__item">Магазин</li>
         <li class="page-breadcrumbs__item">Средства для ухода</li>
       </ul>
@@ -51,14 +53,14 @@
         <article class="producer">
           <h2 class="producer__header">Производители:</h2>
           <ul class="producer__list">
-            <li class="producer__item">
-              <a class="producer__link" href="#">Baxter of California</a>
+            <li class="producer__item>
+              <a class="producer__link">Baxter of California</a>
             </li>
             <li class="producer__item">
               <a class="producer__link" href="#">Mr Natty</a>
             </li>
             <li class="producer__item">
-              <a class="producer__link" href="#">Suavecito</a>
+              <a class="producer__link">Suavecito</a>
             </li>
             <li class="producer__item">
               <a class="producer__link" href="#">Malin+Goetz</a>
@@ -67,7 +69,7 @@
               <a class="producer__link" href="#">Murray’s</a>
             </li>
             <li class="producer__item">
-              <a class="producer__link" href="#">American Crew</a>
+              <a class="producer__link">American Crew</a>
             </li>
           </ul>
         </article>
@@ -79,7 +81,7 @@
               <a class="category__link" href="#">Бритвенные принадлежности</a>
             </li>
             <li class="category__item">
-              <a class="category__link" href="#">Средства для ухода</a>
+              <a class="category__link">Средства для ухода</a>
             </li>
             <li class="category__item">
               <a class="category__link" href="#">Аксессуары</a>
@@ -92,51 +94,69 @@
 
       <section class="product__list">
         <article class="product__item">
-          <img class="product__img" src="img/product-list/img/1.png" alt="Набор для путешествий «Baxter of California»" width="220" height="165">
-          <h6 class="product__name">Набор для путешествий «Baxter of California»</h6>
-          <p class="product__price">2 900 руб.</p><a class="product__buy" href="product.html">Купить</a>
+          <a class="product__link" href='product.html'>
+            <img class="product__img" src="img/product-list/img/1.png" alt="Набор для путешествий «Baxter of California»" width="220" height="165">
+            <h6 class="product__name">Набор для путешествий «Baxter of California»</h6>
+          </a>
+          <p class="product__price">2 900 руб.</p>
+          <button class="product__buy" type="button">Купить</a>
         </article>
 
         <article class="product__item">
-          <img class="product__img" src="img/product-list/img/2.png" alt="Увлажняющий кондиционер «Baxter of California»" width="220" height="165">
-          <h6 class="product__name">Увлажняющий кондиционер «Baxter of California»</h6>
-          <p class="product__price">750 руб.</p><a class="product__buy" href="product.html">Купить</a>
+          <a class="product__link" href='product.html'>
+            <img class="product__img" src="img/product-list/img/2.png" alt="Увлажняющий кондиционер «Baxter of California»" width="220" height="165">
+            <h6 class="product__name">Увлажняющий кондиционер «Baxter of California»</h6>
+          </a>
+          <p class="product__price">750 руб.</p>
+          <button class="product__buy" type="button">Купить</a>
         </article>
 
         <article class="product__item">
-          <img class="product__img" src="img/product-list/img/3.png" alt="Гель для волос «SUAVECITO»" width="220" height="165">
-          <h6 class="product__name">Гель для волос «SUAVECITO»</h6>
-          <p class="product__price">290 руб.</p><a class="product__buy" href="product.html">Купить</a>
+          <a class="product__link" href='product.html'>
+            <img class="product__img" src="img/product-list/img/3.png" alt="Гель для волос «SUAVECITO»" width="220" height="165">
+            <h6 class="product__name">Гель для волос «SUAVECITO»</h6>
+          </a>
+          <p class="product__price">290 руб.</p>
+          <button class="product__buy" type="button">Купить</a>
         </article>
 
         <article class="product__item">
-          <img class="product__img" src="img/product-list/img/4.png" alt="Глина для укладки волос «American crew»" width="220" height="165">
-          <h6 class="product__name">Глина для укладки волос «American crew»</h6>
-          <p class="product__price">500 руб.</p><a class="product__buy" href="product.html">Купить</a>
+          <a class="product__link" href='product.html'>
+            <img class="product__img" src="img/product-list/img/4.png" alt="Глина для укладки волос «American crew»" width="220" height="165">
+            <h6 class="product__name">Глина для укладки волос «American crew»</h6>
+          </a>
+          <p class="product__price">500 руб.</p>
+          <button class="product__buy" type="button">Купить</a>
         </article>
 
         <article class="product__item">
-          <img class="product__img" src="img/product-list/img/5.png" alt="Гель для волос «AMERICAN CREW»" width="220" height="165">
-          <h6 class="product__name">Гель для волос «AMERICAN CREW»</h6>
-          <p class="product__price">300 руб.</p><a class="product__buy" href="product.html">Купить</a>
+          <a class="product__link" href='product.html'>
+            <img class="product__img" src="img/product-list/img/5.png" alt="Гель для волос «AMERICAN CREW»" width="220" height="165">
+            <h6 class="product__name">Гель для волос «AMERICAN CREW»</h6>
+          </a>
+          <p class="product__price">300 руб.</p>
+          <button class="product__buy" type="button">Купить</a>
         </article>
 
         <article class="product__item">
-          <img class="product__img" src="img/product-list/img/6.png" alt="Набор для бритья «Baxter of California»" width="220" height="165">
-          <h6 class="product__name">Набор для бритья «Baxter of California»</h6>
-          <p class="product__price">3 900 руб.</p><a class="product__buy" href="product.html">Купить</a>
+          <a class="product__link" href='product.html'>
+            <img class="product__img" src="img/product-list/img/6.png" alt="Набор для бритья «Baxter of California»" width="220" height="165">
+            <h6 class="product__name">Набор для бритья «Baxter of California»</h6>
+          </a>
+          <p class="product__price">3 900 руб.</p>
+          <button class="product__buy" type="button">Купить</a>
         </article>
 
         <ul class="pagination">
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">1</a>
-          /li>
+          <li class="pagination__item ia-active">
+            <a class="pagination__link">1</a>
+          </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">2</a>
-          /li>
+          </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">3</a>
-          /li>
+          </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">4</a>
           </li>
