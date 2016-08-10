@@ -10,5 +10,8 @@ Thumbs.db
 
 package.json
 gulpfile.js
+.gulp-scss-cache/
+.sass-cache/
+.csscomb.json
 src/
 html-backup/
