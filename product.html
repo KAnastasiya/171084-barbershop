@@ -8,12 +8,12 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <div class="logo">
-          <a class="logo__link" href="index.html">
-            <img class="logo__image" src="img/logo/img/logo.png" alt="Logo" width="111" height="24">
-          </a>
-        </div>
         <nav class="page-navigation">
+          <div class="logo">
+            <a class="logo__link" href="index.html">
+              <img class="logo__image" src="img/logo/img/logo.png" alt="Logo" width="111" height="24">
+            </a>
+          </div>
           <ul class="page-navigation__list">
             <li class="page-navigation__item">
               <a class="page-navigation__link" href="#">Информация</a>
@@ -32,7 +32,6 @@
             </li>
           </ul>
         </nav>
-
         <div class="user">
           <button class="btn btn--login" type="button">Вход</button>
         </div>
@@ -120,5 +119,28 @@
         </section>
       </div>
     </footer>
+    <div class="modal hidden">
+      <div class="modal__dialog">
+        <div class="modal__header">
+          <h2>Личный кабинет</h2>
+          <p>Введите, пожалуйста, свой логин и пароль</p>
+          <button class="btn btn--close" type="button"></button>
+        </div>
+        <div class="modal__body">
+          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <input type="text" placeholder="Логин">
+            <input type="password" placeholder="Пароль">
+            <div class="row">
+              <div class="login-form__controls">
+                <input type="checkbox" name="remember-me" id="remember-me">
+                <label for="remember-me">Запомните меня</label>
+              </div>
+              <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            </div>
+            <button class="btn btn--login" type="submit">Войти</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
