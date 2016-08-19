@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.min.js" defer></script>
   </head>
   <body>
     <header class="page-header">
@@ -51,16 +53,15 @@
       <div class="row">
         <aside class="filters">
           <div class="filters__type filters__type--producer">
-            <h2>Производители:</h2>
+            <h3>Производители:</h3>
             <ul class="filters__type-list">
-              <li class="filters__type-item filters__type-item--active">
-                <a class="filters__type-link" href="#">Baxter of California</a>
-              </li>
               <li class="filters__type-item">
-                <a class="filters__type-link" href="#">Mr Natty</a>
+                <a class="filters__type-link--active filters__type-link" href="#">Baxter of California</a>
               </li>
-              <li class="filters__type-item filters__type-item--active">
-                <a class="filters__type-link" href="#">Suavecito</a>
+              <li class="filters__type-item"><a class="filters__type-link" href="#">Mr Natty</a>
+            </li>
+              <li class="filters__type-item">
+                <a class="filters__type-link--active filters__type-link" href="#">Suavecito</a>
               </li>
               <li class="filters__type-item">
                 <a class="filters__type-link" href="#">Malin+Goetz</a>
@@ -68,19 +69,19 @@
               <li class="filters__type-item">
                 <a class="filters__type-link" href="#">Murray’s</a>
               </li>
-              <li class="filters__type-item filters__type-item--active">
-                <a class="filters__type-link" href="#">American Crew</a>
+              <li class="filters__type-item">
+                <a class="filters__type-link--active filters__type-link" href="#">American Crew</a>
               </li>
             </ul>
           </div>
           <div class="filters__type filters__type--category">
-            <h2>Группы товаров:</h2>
+            <h3>Группы товаров:</h3>
             <ul class="filters__type-list">
               <li class="filters__type-item">
                 <a class="filters__type-link" href="#">Бритвенные принадлежности</a>
               </li>
-              <li class="filters__type-item filters__type-item--active">
-                <a class="filters__type-link" href="#">Средства для ухода</a>
+              <li class="filters__type-item">
+                <a class="filters__type-link--active filters__type-link" href="#">Средства для ухода</a>
               </li>
               <li class="filters__type-item">
                 <a class="filters__type-link" href="#">Аксессуары</a>
@@ -96,7 +97,7 @@
             </a>
             <div class="product__info">
               <a class="product__link" href="product.html">
-                <h3>Набор для путешествий «Baxter of California»</h3>
+                <h4>Набор для путешествий<span>«Baxter of California»</span></h4>
               </a>
               <div class="purchase">
                 <span class="purchase__price">2 900 руб.</span>
@@ -110,7 +111,7 @@
             </a>
             <div class="product__info">
               <a class="product__link" href="product.html">
-                <h3>Увлажняющий кондиционер «Baxter of California»</h3>
+                <h4>Увлажняющий кондиционер<span>«Baxter of California»</span></h4>
               </a>
               <div class="purchase">
                 <span class="purchase__price">750 руб.</span>
@@ -124,7 +125,7 @@
             </a>
             <div class="product__info">
               <a class="product__link" href="product.html">
-                <h3>Гель для волос «SUAVECITO»</h3>
+                <h4>Гель для волос<span>«SUAVECITO»</span></h4>
               </a>
               <div class="purchase">
                 <span class="purchase__price">290 руб.</span>
@@ -138,7 +139,7 @@
             </a>
             <div class="product__info">
               <a class="product__link" href="product.html">
-                <h3>Глина для укладки волос «American crew»</h3>
+                <h4>Глина для укладки волос<span>«American crew»</span></h4>
               </a>
               <div class="purchase">
                 <span class="purchase__price">500 руб.</span>
@@ -152,7 +153,7 @@
             </a>
             <div class="product__info">
               <a class="product__link" href="product.html">
-                <h3>Гель для волос «AMERICAN CREW»</h3>
+                <h4>Гель для волос<span>«AMERICAN CREW»</span></h4>
               </a>
               <div class="purchase">
                 <span class="purchase__price">300 руб.</span>
@@ -166,7 +167,7 @@
             </a>
             <div class="product__info">
               <a class="product__link" href="product.html">
-                <h3>Набор для бритья «Baxter of California»</h3>
+                <h4>Набор для бритья<span>«Baxter of California»</span></h4>
               </a>
               <div class="purchase">
                 <span class="purchase__price">3 900 руб.</span>
@@ -175,7 +176,7 @@
             </div>
           </article>
           <ul class="pagination">
-            <li class="pagination__item pagination__item--active">
+            <li class="pagination__item--active pagination__item">
               <a class="btn btn--pagination" href="#">1</a>
             </li>
             <li class="pagination__item">
@@ -219,7 +220,7 @@
         </section>
       </div>
     </footer>
-    <div class="modal hidden">
+    <div class="modal" id="login">
       <div class="modal__dialog">
         <div class="modal__header">
           <h2>Личный кабинет</h2>
@@ -228,16 +229,23 @@
         </div>
         <div class="modal__body">
           <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="text" placeholder="Логин">
-            <input type="password" placeholder="Пароль">
-            <div class="row">
-              <div class="login-form__controls">
-                <input type="checkbox" name="remember-me" id="remember-me">
-                <label for="remember-me">Запомните меня</label>
-              </div>
-              <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            <div class="login-form__login">
+              <label for="login"></label>
+              <input type="text" placeholder="Логин" id="login">
             </div>
-            <button class="btn btn--login" type="submit">Войти</button>
+            <div class="login-form__password">
+              <label for="password"></label>
+              <input type="password" placeholder="Пароль" id="password">
+            </div>
+            <div class="login-form__row">
+              <div class="login-form__remember-me">
+                <input type="checkbox" name="remember-me" id="remember-me" checked>
+                <label for="remember-me">Запомните меня</label>
+              </div><a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            </div>
+            <div class="login-form__controls">
+              <button class="btn btn--login" type="submit">Войти</button>
+            </div>
           </form>
         </div>
       </div>

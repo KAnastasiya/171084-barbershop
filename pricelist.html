@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.min.js" defer></script>
   </head>
   <body>
     <header class="page-header">
@@ -46,32 +48,34 @@
         <li class="breadcrumbs__item">Прайс-лист</li>
       </ul>
       <div class="pricelist__slogan">Истинно мужская классика</div>
-      <section class="used-product">
-        <h2>Мы используем только лучшие средства:</h2>
-        <ul class="used-product__list">
-          <li>Baxter of California</li>
-          <li>Mr Natty</li>
-          <li>Suavecito</li>
-          <li>Malin+Goetz</li>
-        </ul>
-      </section>
-      <section class="prices">
-        <h2>Цены на услуги наших мастеров:</h2>
-        <table class="prices__table">
-          <tr class="prices__row">
-            <td class="prices__service">Стрижка</td>
-            <td class="prices__value">1500 р.</td>
-          </tr>
-          <tr class="prices__row">
-            <td class="prices__service">Стрижка бороды</td>
-            <td class="prices__value">500 р.</td>
-          </tr>
-          <tr class="prices__row">
-            <td class="prices__service">Накрутка усов</td>
-            <td class="prices__value">350 р.</td>
-          </tr>
-        </table>
-      </section>
+      <div class="pricelist__row">
+        <section class="used-product">
+          <h2>Мы используем только лучшие средства:</h2>
+          <ul class="used-product__list">
+            <li>Baxter of California</li>
+            <li>Mr Natty</li>
+            <li>Suavecito</li>
+            <li>Malin+Goetz</li>
+          </ul>
+        </section>
+        <section class="prices">
+          <h2>Цены на услуги наших мастеров:</h2>
+          <table class="prices__table">
+            <tr class="prices__row">
+              <td class="prices__service">Стрижка</td>
+              <td class="prices__value">1500 р.</td>
+            </tr>
+            <tr class="prices__row">
+              <td class="prices__service">Стрижка бороды</td>
+              <td class="prices__value">500 р.</td>
+            </tr>
+            <tr class="prices__row">
+              <td class="prices__service">Накрутка усов</td>
+              <td class="prices__value">350 р.</td>
+            </tr>
+          </table>
+        </section>
+      </div>
       <section class="about-us">
         <h2>Несколько слов о нас:</h2>
         <p class="about-us__text">Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
@@ -106,7 +110,7 @@
         </section>
       </div>
     </footer>
-    <div class="modal hidden">
+    <div class="modal" id="login">
       <div class="modal__dialog">
         <div class="modal__header">
           <h2>Личный кабинет</h2>
@@ -115,16 +119,23 @@
         </div>
         <div class="modal__body">
           <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="text" placeholder="Логин">
-            <input type="password" placeholder="Пароль">
-            <div class="row">
-              <div class="login-form__controls">
-                <input type="checkbox" name="remember-me" id="remember-me">
-                <label for="remember-me">Запомните меня</label>
-              </div>
-              <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            <div class="login-form__login">
+              <label for="login"></label>
+              <input type="text" placeholder="Логин" id="login">
             </div>
-            <button class="btn btn--login" type="submit">Войти</button>
+            <div class="login-form__password">
+              <label for="password"></label>
+              <input type="password" placeholder="Пароль" id="password">
+            </div>
+            <div class="login-form__row">
+              <div class="login-form__remember-me">
+                <input type="checkbox" name="remember-me" id="remember-me" checked>
+                <label for="remember-me">Запомните меня</label>
+              </div><a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            </div>
+            <div class="login-form__controls">
+              <button class="btn btn--login" type="submit">Войти</button>
+            </div>
           </form>
         </div>
       </div>

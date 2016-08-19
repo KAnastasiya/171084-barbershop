@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.min.js" defer></script>
   </head>
   <body>
     <header class="page-header">
@@ -32,7 +34,7 @@
         </div>
       </div>
     </header>
-    <main class="index-main">
+    <main class="index">
       <div class="container">
         <div class="index-logo">
           <img src="img/index-logo/img/logo.png" alt="Барбершоп «Бородинский»" width="368" height="204">
@@ -51,7 +53,7 @@
             <p class="features__text">Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
           </div>
         </section>
-        <div class="row">
+        <div class="index-block">
           <section class="news col-half">
             <h2>Новости</h2>
             <ul class="news__list">
@@ -64,7 +66,9 @@
                 <time class="news__date" datetime="2016-01-18">18 января</time>
               </li>
             </ul>
-            <a class="btn btn--news" href="#">Все новости</a>
+            <div class="news__controls">
+              <a class="btn btn--news" href="#">Все новости</a>
+            </div>
           </section>
           <section class="gallery col-half">
             <div class="col-half__container">
@@ -81,7 +85,7 @@
             </div>
           </section>
         </div>
-        <div class="row">
+        <div class="index-block">
           <section class="contacts col-half">
             <h2>Контактная информация</h2>
             <p class="contacts__text">Барбершоп «Бородинский»</p>
@@ -102,11 +106,17 @@
               <h2>Записаться</h2>
               <p class="appointment__text">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
               <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
-                <input type="text" name="date" placeholder="Дата">
-                <input type="text" name="time" placeholder="Время">
-                <input type="text" name="name" placeholder="Ваше имя">
-                <input type="tel" name="phone" placeholder="Телефон">
-                <button class="btn btn--appointment" type="submit">Отправить</button>
+                <div class="form-row">
+                  <input type="text" name="date" placeholder="Дата">
+                  <input type="text" name="time" placeholder="Время">
+                </div>
+                <div class="form-row">
+                  <input type="text" name="name" placeholder="Ваше имя">
+                  <input type="tel" name="phone" placeholder="Телефон">
+                </div>
+                <div class="appointment__controls">
+                  <button class="btn btn--appointment" type="submit">Отправить</button>
+                </div>
               </form>
             </div>
           </section>
@@ -141,7 +151,7 @@
         </section>
       </div>
     </footer>
-    <div class="modal hidden">
+    <div class="modal" id="login">
       <div class="modal__dialog">
         <div class="modal__header">
           <h2>Личный кабинет</h2>
@@ -150,16 +160,23 @@
         </div>
         <div class="modal__body">
           <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="text" placeholder="Логин">
-            <input type="password" placeholder="Пароль">
-            <div class="row">
-              <div class="login-form__controls">
-                <input type="checkbox" name="remember-me" id="remember-me">
-                <label for="remember-me">Запомните меня</label>
-              </div>
-              <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            <div class="login-form__login">
+              <label for="login"></label>
+              <input type="text" placeholder="Логин" id="login">
             </div>
-            <button class="btn btn--login" type="submit">Войти</button>
+            <div class="login-form__password">
+              <label for="password"></label>
+              <input type="password" placeholder="Пароль" id="password">
+            </div>
+            <div class="login-form__row">
+              <div class="login-form__remember-me">
+                <input type="checkbox" name="remember-me" id="remember-me" checked>
+                <label for="remember-me">Запомните меня</label>
+              </div><a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            </div>
+            <div class="login-form__controls">
+              <button class="btn btn--login" type="submit">Войти</button>
+            </div>
           </form>
         </div>
       </div>

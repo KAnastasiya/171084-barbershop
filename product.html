@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.min.js" defer></script>
   </head>
   <body>
     <header class="page-header">
@@ -53,33 +55,32 @@
       </ul>
       <div class="row">
         <div class="product-gallery">
-          <img class="product-gallery__image" src="img/product-gallery/img/product.jpg" alt="Whole set" width="460" height="498">
+          <img class="product-gallery__image" src="img/product-gallery/img/product.jpg" alt="product" width="460" height="498">
           <ul class="product-gallery__thumbnails">
             <li class="product-gallery__thumbnails-item">
-              <img class="product-gallery__thumbnails-image" src="img/product-gallery/img/1.jpg" alt="Whole set" width="140" height="149">
+              <img src="img/product-gallery/img/1.jpg" alt="thumbnails" width="140" height="149">
             </li>
             <li class="product-gallery__thumbnails-item">
-              <img class="product-gallery__thumbnails-image" src="img/product-gallery/img/2.jpg" alt="Bag" width="140" height="149">
+              <img src="img/product-gallery/img/2.jpg" alt="thumbnails" width="140" height="149">
             </li>
             <li class="product-gallery__thumbnails-item">
-              <img class="product-gallery__thumbnails-image" src="img/product-gallery/img/3.jpg" alt="Whole set" width="140" height="149">
+              <img src="img/product-gallery/img/3.jpg" alt="thumbnails" width="140" height="149">
             </li>
           </ul>
         </div>
         <div class="product-details">
-          <div class="row">
+          <div class="product-details__title">
             <span class="product-details__available">Есть в наличии</span>
             <span class="product-details__code">Артикул: dexter-ae</span>
           </div>
           <div class="product-details__descr">
             <p>Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
           </div>
-          <div class="purchase">
-            <span class="purchase__price">2 900 руб.</span>
+          <div class="purchase"><span class="purchase__price">2 900 руб.</span>
             <button class="btn btn--buy" type="button">Купить</button>
           </div>
           <div class="product-details__composition">
-            <p class="product-details__composition--title">В набор входят:</p>
+            <h3>В набор входят:</h3>
             <ul class="product-details__composition-list">
               <li>Средство для умывания (50 мл)</li>
               <li>Увлажняющий крем (50 мл)</li>
@@ -119,7 +120,7 @@
         </section>
       </div>
     </footer>
-    <div class="modal hidden">
+    <div class="modal" id="login">
       <div class="modal__dialog">
         <div class="modal__header">
           <h2>Личный кабинет</h2>
@@ -128,16 +129,23 @@
         </div>
         <div class="modal__body">
           <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="text" placeholder="Логин">
-            <input type="password" placeholder="Пароль">
-            <div class="row">
-              <div class="login-form__controls">
-                <input type="checkbox" name="remember-me" id="remember-me">
-                <label for="remember-me">Запомните меня</label>
-              </div>
-              <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            <div class="login-form__login">
+              <label for="login"></label>
+              <input type="text" placeholder="Логин" id="login">
             </div>
-            <button class="btn btn--login" type="submit">Войти</button>
+            <div class="login-form__password">
+              <label for="password"></label>
+              <input type="password" placeholder="Пароль" id="password">
+            </div>
+            <div class="login-form__row">
+              <div class="login-form__remember-me">
+                <input type="checkbox" name="remember-me" id="remember-me" checked>
+                <label for="remember-me">Запомните меня</label>
+              </div><a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            </div>
+            <div class="login-form__controls">
+              <button class="btn btn--login" type="submit">Войти</button>
+            </div>
           </form>
         </div>
       </div>

@@ -14,4 +14,6 @@ gulpfile.js
 .sass-cache/
 .csscomb.json
 src/
-html-backup/
+
+.eslintrc
+.eslintignore
