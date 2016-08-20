@@ -52,43 +52,51 @@
       </ul>
       <div class="row">
         <aside class="filters">
-          <div class="filters__type filters__type--producer">
-            <h3>Производители:</h3>
-            <ul class="filters__type-list">
-              <li class="filters__type-item">
-                <a class="filters__type-link--active filters__type-link" href="#">Baxter of California</a>
-              </li>
-              <li class="filters__type-item"><a class="filters__type-link" href="#">Mr Natty</a>
-            </li>
-              <li class="filters__type-item">
-                <a class="filters__type-link--active filters__type-link" href="#">Suavecito</a>
-              </li>
-              <li class="filters__type-item">
-                <a class="filters__type-link" href="#">Malin+Goetz</a>
-              </li>
-              <li class="filters__type-item">
-                <a class="filters__type-link" href="#">Murray’s</a>
-              </li>
-              <li class="filters__type-item">
-                <a class="filters__type-link--active filters__type-link" href="#">American Crew</a>
-              </li>
-            </ul>
-          </div>
-          <div class="filters__type filters__type--category">
-            <h3>Группы товаров:</h3>
-            <ul class="filters__type-list">
-              <li class="filters__type-item">
-                <a class="filters__type-link" href="#">Бритвенные принадлежности</a>
-              </li>
-              <li class="filters__type-item">
-                <a class="filters__type-link--active filters__type-link" href="#">Средства для ухода</a>
-              </li>
-              <li class="filters__type-item">
-                <a class="filters__type-link" href="#">Аксессуары</a>
-              </li>
-            </ul>
-          </div>
-          <button class="btn btn--apply-filters" type="button">Показать</button>
+          <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="filters__type filters__type--producer">
+              <legend>Производители:</legend>
+              <div class="filters__type-item">
+                <input type="checkbox" name="producer1" id="producer1" checked>
+                <label for="producer1">Baxter of California</label>
+              </div>
+              <div class="filters__type-item">
+                <input type="checkbox" name="producer2" id="producer2">
+                <label for="producer2">Mr Natty</label>
+              </div>
+              <div class="filters__type-item">
+                <input type="checkbox" name="producer3" id="producer3" checked>
+                <label for="producer3">Suavecito</label>
+              </div>
+              <div class="filters__type-item">
+                <input type="checkbox" name="producer4" id="producer4">
+                <label for="producer4">Malin+Goetz</label>
+              </div>
+              <div class="filters__type-item">
+                <input type="checkbox" name="producer5" id="producer5">
+                <label for="producer5">Murray’s</label>
+              </div>
+              <div class="filters__type-item">
+                <input type="checkbox" name="producer6" id="producer6" checked>
+                <label for="producer6">American Crew</label>
+              </div>
+            </fieldset>
+            <fieldset class="filters__type filters__type--category">
+              <legend>Группы товаров:</legend>
+              <div class="filters__type-item">
+                <input type="radio" name="category" id="category1">
+                <label for="category1">Бритвенные принадлежности</label>
+              </div>
+              <div class="filters__type-item">
+                <input type="radio" name="category" id="category2" checked>
+                <label for="category2">Средства для ухода</label>
+              </div>
+              <div class="filters__type-item">
+                <input type="radio" name="category" id="category3">
+                <label for="category3">Аксессуары</label>
+              </div>
+            </fieldset>
+            <button class="btn btn--apply-filters" type="button">Показать</button>
+          </form>
         </aside>
         <section class="products">
           <article class="product">
@@ -241,7 +249,8 @@
               <div class="login-form__remember-me">
                 <input type="checkbox" name="remember-me" id="remember-me" checked>
                 <label for="remember-me">Запомните меня</label>
-              </div><a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+              </div>
+              <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
             </div>
             <div class="login-form__controls">
               <button class="btn btn--login" type="submit">Войти</button>
