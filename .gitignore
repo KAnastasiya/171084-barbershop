@@ -10,10 +10,12 @@ Thumbs.db
 
 package.json
 gulpfile.js
-.gulp-scss-cache/
-.sass-cache/
-.csscomb.json
-src/
-
+webpack.config.js
+webpack.config-uglify.js
 .eslintrc
 .eslintignore
+.csscomb.json
+
+.gulp-scss-cache/
+.sass-cache/
+src/
