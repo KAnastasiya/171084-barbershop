@@ -238,7 +238,7 @@ textarea {
 }
 
 .page-navigation__link,
-.user .btn--login {
+.user .btn--login-show {
   display: inline-block;
   height: 72px;
   padding: 0 20px;
@@ -250,11 +250,11 @@ textarea {
   text-decoration: none;
 }
 .page-navigation__link:not(.page-navigation__link--active):hover,
-.user .btn--login:not(.page-navigation__link--active):hover,
+.user .btn--login-show:not(.page-navigation__link--active):hover,
 .page-navigation__link:not(.page-navigation__link--active):active,
-.user .btn--login:not(.page-navigation__link--active):active,
+.user .btn--login-show:not(.page-navigation__link--active):active,
 .page-navigation__link:not(.page-navigation__link--active):focus,
-.user .btn--login:not(.page-navigation__link--active):focus {
+.user .btn--login-show:not(.page-navigation__link--active):focus {
   background-color: #242424;
   border-color: #242424;
 }
@@ -265,19 +265,6 @@ textarea {
   font-size: 14px;
   line-height: 24px;
   color: #fff;
-}
-
-.login-form__login,
-.login-form__password {
-  position: relative;
-
-  background-color: brown;
-}
-.login-form__login label,
-.login-form__password label {
-  position: absolute;
-  top: 13px;
-  right: 16px;
 }
 
 .product-details__composition-list,
@@ -337,6 +324,25 @@ textarea {
   clear: both;
 }
 
+.icon-text,
+.footer-contacts__title,
+.login-form input:not([type='checkbox']) + label,
+.features__title,
+.appointment .form-field label,
+.products__title {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0; 
+
+  clip: rect(0, 0, 0, 0);
+}
+
 .icon--close,
 .btn--close {
   display: inline-block;
@@ -345,29 +351,29 @@ textarea {
 
   vertical-align: top;
 
-  background: url(../icon/sprite.png) no-repeat -286px 0;
+  background: url(../icon/sprite.png) no-repeat -318px 0;
 }
 
 .icon--password,
-.login-form__password label {
+.login-form__password .icon {
   display: inline-block;
   width: 15px;
   height: 17px;
 
   vertical-align: top;
 
-  background: url(../icon/sprite.png) no-repeat -131px 0;
+  background: url(../icon/sprite.png) no-repeat -163px 0;
 }
 
 .icon--user,
-.login-form__login label {
+.login-form__login .icon {
   display: inline-block;
   width: 15px;
   height: 15px;
 
   vertical-align: top;
 
-  background: url(../icon/sprite.png) no-repeat -96px 0;
+  background: url(../icon/sprite.png) no-repeat -128px 0;
 }
 
 .icon--facebook-active,
@@ -400,7 +406,7 @@ textarea {
 
   vertical-align: top;
 
-  background: url(../icon/sprite.png) no-repeat -245px 0;
+  background: url(../icon/sprite.png) no-repeat -236px 0;
 }
 
 .icon--instagram,
@@ -411,7 +417,7 @@ textarea {
 
   vertical-align: top;
 
-  background: url(../icon/sprite.png) no-repeat -204px 0;
+  background: url(../icon/sprite.png) no-repeat -277px 0;
 }
 
 .icon--vkontakte-active,
@@ -422,7 +428,7 @@ textarea {
 
   vertical-align: top;
 
-  background: url(../icon/sprite.png) no-repeat -373px 0;
+  background: url(../icon/sprite.png) no-repeat -405px 0;
 }
 
 .icon--vkontakte,
@@ -433,18 +439,29 @@ textarea {
 
   vertical-align: top;
 
-  background: url(../icon/sprite.png) no-repeat -328px 0;
+  background: url(../icon/sprite.png) no-repeat -360px 0;
 }
 
 .icon--login,
-.user .btn--login::before {
+.user .btn--login-show::before {
   display: inline-block;
   width: 18px;
   height: 16px;
 
   vertical-align: top;
 
-  background: url(../icon/sprite.png) no-repeat -166px 0;
+  background: url(../icon/sprite.png) no-repeat -198px 0;
+}
+
+.icon--check-disabled,
+input[type='checkbox'][disabled]:checked + label::after {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+
+  vertical-align: top;
+
+  background: url(../icon/sprite.png) no-repeat -96px 0;
 }
 
 .icon--check,
@@ -624,20 +641,16 @@ main {
 }
 
 input {
-  height: 43px;
   padding: 0 16px;
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 43px;
   color: #000;
   text-transform: uppercase;
 
   background-color: #f9f6f3;
   border: 2px solid #000101;
-}
-input:not(:last-of-type) {
-  margin-right: 20px;
 }
 input:focus {
   border-color: #663d15;
@@ -651,6 +664,12 @@ input::-moz-placeholder {
 }
 input:-ms-input-placeholder {
   opacity: 1;
+}
+input.error {
+  border-color: red;
+}
+input.error:focus {
+  border-color: #663d15;
 }
 
 input[type='checkbox'],
@@ -669,6 +688,10 @@ input[type='radio'] + label {
   background-color: lightgreen;
   cursor: pointer;
 }
+input[type='checkbox'] + label:hover,
+input[type='radio'] + label:hover {
+  color: #663d15;
+}
 input[type='checkbox'] + label::before,
 input[type='radio'] + label::before {
   content: '';
@@ -680,6 +703,16 @@ input[type='radio'] + label::before {
   height: 16px;
 
   border: 2px solid #000;
+}
+input[type='checkbox'][disabled] + label,
+input[type='radio'][disabled] + label {
+  color: #b3b1ae;
+
+  cursor: initial;
+}
+input[type='checkbox'][disabled] + label::before,
+input[type='radio'][disabled] + label::before {
+  border-color: #b3b1ae;
 }
 input[type='checkbox']:checked + label::after,
 input[type='radio']:checked + label::after {
@@ -706,6 +739,9 @@ input[type='radio']:checked + label::after {
   border-radius: 50%;
   transform: translate(50%);
 }
+input[type='radio'][disabled]:checked + label::after {
+  background-color: #b3b1ae;
+}
 
 fieldset {
   margin: 0;
@@ -722,6 +758,10 @@ legend {
   line-height: 30px;
 
   background-color: green;
+}
+
+.form-field:not(:last-of-type) {
+  margin-right: 20px;
 }
 
 .form-row:not(:last-of-type) {
@@ -745,11 +785,13 @@ legend {
 }
 .modal__dialog {
   position: relative;
-
-  margin: 72px auto 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
   background: #f7f4f1 url('../img/bg-white-pattern.jpg') repeat top left;
-  box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+  box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75); 
+  transform: translate(-50%, -50%);
 }
 .modal__header {
   margin-bottom: 16px;
@@ -819,10 +861,10 @@ legend {
   float: right;
   height: 72px;
 }
-.user .btn--login {
+.user .btn--login-show {
   padding-left: 50px;
 }
-.user .btn--login::before {
+.user .btn--login-show::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -915,8 +957,10 @@ legend {
 
   background-color: yellow;
 }
-.copyright__text {
+.copyright__title {
   margin-bottom: 16px;
+
+  font-size: 14px;
 }
 
 #login .modal__dialog {
@@ -942,6 +986,21 @@ legend {
   width: 100%;
   margin-bottom: 10px;
   padding-right: 40px;
+}
+.login-form .icon {
+  position: absolute;
+  top: 13px;
+  right: 16px;
+}
+.login-form__login {
+  position: relative;
+
+  background-color: brown;
+}
+.login-form__password {
+  position: relative;
+
+  background-color: brown;
 }
 .login-form__controls {
   margin-top: 20px;
@@ -1040,7 +1099,7 @@ main.index {
 .features__item:not(:last-of-type) {
   margin-right: 50px;
 }
-.features__title {
+.features__item-title {
   position: relative;
 
   margin-bottom: 20px;
@@ -1052,7 +1111,7 @@ main.index {
 
   background-color: blue;
 }
-.features__title::after {
+.features__item-title::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -1064,7 +1123,7 @@ main.index {
   background-color: #fff;
   transform: rotate(45deg) translateY(50%);
 }
-.features__text {
+.features__item-text {
   font-size: 14px;
   line-height: 24px;
   color: #f7f4f1;
@@ -1084,6 +1143,9 @@ main.index {
   margin-top: 38px;
 }
 
+.gallery {
+  text-align: center;
+}
 .gallery__link {
   display: block;
 }
@@ -1091,7 +1153,6 @@ main.index {
   margin-top: 45px;
 
   font-size: 0;
-  text-align: center;
 }
 .gallery__content {
   margin: 0;
@@ -1109,14 +1170,18 @@ main.index {
 }
 
 .work-time {
-  margin-top: 20px;
+  margin: 20px 0 32px;
 }
 
 .appointment-form {
   margin-top: 14px;
 }
+.appointment .form-field {
+  display: inline-block;
+  width: 135px;
+}
 .appointment input {
-  width: 130px;
+  width: 100%;
 }
 .appointment__controls {
   margin-top: 20px;
