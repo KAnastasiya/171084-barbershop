@@ -270,8 +270,6 @@ textarea {
 .product-details__composition-list,
 .used-product__list {
   list-style: none;
-
-  background-color: red;
 }
 .product-details__composition-list li,
 .used-product__list li {
@@ -508,8 +506,6 @@ h1 {
 
   font-size: 30px;
   line-height: 42px;
-
-  background-color: blue;
 }
 
 h2 {
@@ -517,8 +513,6 @@ h2 {
 
   font-size: 30px;
   line-height: 42px;
-
-  background-color: green;
 }
 
 h3 {
@@ -526,8 +520,6 @@ h3 {
 
   font-size: 24px;
   line-height: 30px;
-
-  background-color: purple;
 }
 
 h4 {
@@ -572,8 +564,6 @@ main {
   margin-bottom: 55px;
 
   font-size: 0;
-
-  background-color: red;
 }
 .breadcrumbs__item {
   position: relative;
@@ -688,7 +678,6 @@ input[type='radio'] + label {
 
   line-height: 20px;
 
-  background-color: lightgreen;
   cursor: pointer;
 }
 input[type='checkbox'] + label:hover,
@@ -750,7 +739,6 @@ fieldset {
   margin: 0;
   padding: 0;
 
-  background-color: yellow;
   border: 0;
 }
 
@@ -759,8 +747,6 @@ legend {
 
   font-size: 24px;
   line-height: 30px;
-
-  background-color: green;
 }
 
 .form-field:not(:last-of-type) {
@@ -835,7 +821,8 @@ legend {
 }
 
 .page-navigation {
-  float: left;
+  float: left; 
+  width: 80%;
 }
 .page-navigation__item {
   display: inline-block;
@@ -893,8 +880,6 @@ legend {
   margin: 50px 90px 50px 0;
 
   vertical-align: middle;
-
-  background-color: green;
 }
 .footer-contacts__link {
   font-size: 14px;
@@ -907,8 +892,6 @@ legend {
 
   vertical-align: middle;
   text-align: center;
-
-  background-color: red;
 }
 .social__title {
   margin-bottom: 16px;
@@ -952,8 +935,6 @@ legend {
   font-size: 14px;
   vertical-align: middle;
   text-align: center;
-
-  background-color: yellow;
 }
 .copyright__title {
   margin-bottom: 16px;
@@ -966,9 +947,6 @@ legend {
   padding: 60px 80px;
 }
 
-.login-form {
-  background-color: blue;
-}
 .login-form__row {
   margin-top: 20px;
 }
@@ -992,13 +970,9 @@ legend {
 }
 .login-form__login {
   position: relative;
-
-  background-color: brown;
 }
 .login-form__password {
   position: relative;
-
-  background-color: brown;
 }
 .login-form__controls {
   margin-top: 20px;
@@ -1044,8 +1018,6 @@ main.index {
   position: relative;
 
   width: 390px;
-
-  background-color: blue;
 }
 .col-half:first-of-type {
   float: left;
@@ -1074,8 +1046,6 @@ main.index {
   margin-bottom: 20px;
 
   text-align: center;
-
-  background-color: purple;
 }
 
 .features {
@@ -1083,16 +1053,12 @@ main.index {
 
   font-size: 0;
   text-align: center;
-
-  background-color: green;
 }
 .features__item {
   display: inline-block;
   width: 280px;
 
   vertical-align: top;
-
-  background-color: red;
 }
 .features__item:not(:last-of-type) {
   margin-right: 50px;
@@ -1106,8 +1072,6 @@ main.index {
   font-size: 30px;
   line-height: 42px;
   color: #f7f4f1;
-
-  background-color: blue;
 }
 .features__item-title::after {
   content: '';
@@ -1193,8 +1157,6 @@ main.index {
 .filters {
   float: left;
   width: 168px;
-
-  background-color: purple;
 }
 .filters__type {
   margin-bottom: 40px;
@@ -1208,8 +1170,6 @@ main.index {
   width: 702px;
 
   font-size: 0;
-
-  background-color: green;
 }
 
 .product {
@@ -1227,8 +1187,6 @@ main.index {
 }
 .product__info {
   padding: 16px;
-
-  background-color: grey;
 }
 .product__link {
   color: #000;
@@ -1266,8 +1224,6 @@ main.index {
 .product-gallery {
   float: left;
   width: 460px;
-
-  background-color: green;
 }
 .product-gallery__image {
   padding-bottom: 20px;
@@ -1277,8 +1233,6 @@ main.index {
 .product-gallery__thumbnails {
   font-size: 0;
   line-height: 1;
-
-  background-color: blue;
 }
 .product-gallery__thumbnails-item {
   display: inline-block;
@@ -1295,13 +1249,9 @@ main.index {
   float: right;
   width: 410px;
   padding-top: 20px;
-
-  background-color: blue;
 }
 .product-details__title {
   margin-bottom: 30px;
-
-  background-color: yellow;
 }
 .product-details__available {
   float: left;
@@ -1313,11 +1263,6 @@ main.index {
 }
 .product-details__descr {
   margin-bottom: 30px;
-
-  background-color: green;
-}
-.product-details__composition {
-  background-color: purple;
 }
 .product-details .purchase {
   margin-bottom: 60px;
@@ -1330,8 +1275,6 @@ main.index {
   margin-bottom: 70px;
 
   text-align: center;
-
-  background-color: yellow;
 }
 .pricelist__slogan p {
   position: relative;
@@ -1346,7 +1289,7 @@ main.index {
   vertical-align: middle;
   text-align: center;
 
-  background-color: green;
+  background: #f7f4f1 url('../img/bg-white-pattern.jpg') repeat top left;
 }
 .pricelist__slogan::before {
   content: '';
@@ -1362,8 +1305,6 @@ main.index {
 }
 .pricelist__row {
   margin-bottom: 65px;
-
-  background-color: purple;
 }
 
 .used-product {
