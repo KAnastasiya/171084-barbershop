@@ -295,6 +295,7 @@ textarea {
 
 .container::before,
 .purchase::before,
+.row::before,
 .page-header::before,
 .page-navigation::before,
 .login-form__row::before,
@@ -303,6 +304,7 @@ textarea {
 .pricelist__row::before,
 .container::after,
 .purchase::after,
+.row::after,
 .page-header::after,
 .page-navigation::after,
 .login-form__row::after,
@@ -315,6 +317,7 @@ textarea {
 }
 .container::after,
 .purchase::after,
+.row::after,
 .page-header::after,
 .page-navigation::after,
 .login-form__row::after,
@@ -833,11 +836,6 @@ legend {
 
 .page-navigation {
   float: left;
-}
-.page-navigation__list {
-  float: right;
-
-  font-size: 0;
 }
 .page-navigation__item {
   display: inline-block;
