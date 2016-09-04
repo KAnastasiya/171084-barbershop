@@ -19,3 +19,4 @@ webpack.config-uglify.js
 .gulp-scss-cache/
 .sass-cache/
 src/
+preview/
