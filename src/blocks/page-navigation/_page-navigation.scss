@@ -1,0 +1,25 @@
+.page-navigation {
+  float: left;
+  width: 80%;
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    @extend %nav-text;
+
+    position: relative;
+    &--active {
+      &::after {
+        content: '';
+        position: absolute;
+        right: $padding-base;
+        bottom: 0;
+        left: $padding-base;
+
+        height: 4px;
+
+        background-color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.page-footer {
+  height: 190px;
+
+  font-size: 0;
+
+  background-color: #252525;
+  background-image: url('../img/page-footer/img/shadow-pattern.png'), url('../img/page-footer/img/bg.jpg');
+  background-repeat: repeat-X, no-repeat;
+  background-position: top left;
+  .btn:hover {
+    color: #000;
+
+    background-color: #fff;
+    border-color: #fff;
+  }
+}

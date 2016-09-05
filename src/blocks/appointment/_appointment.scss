@@ -1,0 +1,26 @@
+.appointment {
+  @extend %index-column;
+  &__container {
+    @extend %index-column-container;
+  }
+  &-form {
+    margin-top: 24px;
+  }
+  .form-field {
+    display: inline-block;
+    width: 135px;
+    label {
+      @extend %sr-only;
+    }
+  }
+  input {
+    width: 100%;
+  }
+  &__controls {
+    margin-top: $padding-base;
+  }
+}
+
+.btn--appointment {
+  width: 100%;
+}

@@ -1,0 +1,25 @@
+.gallery {
+  @extend %index-column;
+  &__container {
+    @extend %index-column-container;
+  }
+  &__link {
+    display: block;
+  }
+  &__controls {
+    margin-top: 36px;
+
+    font-size: 0;
+  }
+  &__content {
+    margin: 0;
+    padding-top: 10px;
+
+    text-align: center;
+  }
+}
+
+.btn--prev,
+.btn--next {
+  width: ($col-half-container-width - $padding-base) / 2;
+}

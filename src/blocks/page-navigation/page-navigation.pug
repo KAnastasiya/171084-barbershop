@@ -1,0 +1,20 @@
+nav.page-navigation
+  if !main
+    include ../logo/logo
+  ul.page-navigation__list
+    li.page-navigation__item
+      a(href='#').page-navigation__link Информация
+    li.page-navigation__item
+      a(href='#').page-navigation__link Новости
+    li.page-navigation__item
+      if currentUrl === '/pricelist'
+        a.page-navigation__link.page-navigation__link--active Прайс-лист
+      else
+        a(href='pricelist.html').page-navigation__link Прайс-лист
+    li.page-navigation__item
+      if currentUrl === '/shop'
+        a.page-navigation__link.page-navigation__link--active Магазин
+      else
+        a(href='shop.html').page-navigation__link Магазин
+    li.page-navigation__item
+      a(href='#').page-navigation__link Контакты

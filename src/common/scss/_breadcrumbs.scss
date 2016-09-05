@@ -1,0 +1,30 @@
+.breadcrumbs {
+  margin-bottom: 45px;
+
+  font-size: 0;
+  &__item {
+    position: relative;
+
+    display: inline-block;
+
+    font-size: 14px;
+    line-height: 24px;
+    vertical-align: top;
+    color: #aba9a7;
+    &:not(:last-of-type) {
+      padding-right: $breadcrumbs-padding-horizontal;
+      &::after {
+        @include icon-rhombus($breadcrumbs-rhombus-size, -50%, #000);
+
+        right: -$breadcrumbs-padding-horizontal / 2;
+      }
+    }
+    &:not(:first-of-type) {
+      margin-left: 25px;
+    }
+  }
+  &__link {
+    color: #000;
+    text-decoration: none;
+  }
+}

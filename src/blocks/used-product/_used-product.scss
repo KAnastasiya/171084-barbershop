@@ -1,0 +1,11 @@
+.used-product {
+  float: left;
+  width: 51%;
+  h3 {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  &__list {
+    @extend %list;
+  }
+}

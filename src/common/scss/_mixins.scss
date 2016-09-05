@@ -1,0 +1,16 @@
+// Draw rhombus
+@mixin icon-rhombus(
+  $size: 28px,
+  $translate: 50%,
+  $bg: #fff
+) {
+  content: '';
+  position: absolute;
+  top: 50%;
+
+  width: $size;
+  height: $size;
+
+  background-color: $bg;
+  transform: rotate(45deg) translateY($translate);
+}

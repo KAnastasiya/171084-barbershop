@@ -1,0 +1,24 @@
+mixin product(image, alt, type, name, price)
+  article.product
+    a(href='product.html').product__link
+      img(src='img/products/img/' + image + '.jpg', alt=alt, width='220', height='165').product__image
+    div.product__info
+      a(href='product.html').product__link
+        h4= type
+          span= name
+      div.purchase
+        span.purchase__price= price
+        button(type='button').btn.btn--buy Купить
+
+section.products
+  h2.products__title Наши продукты
+  +product(1, 'Набор для путешествий Baxter of California', 'Набор для путешествий', '«Baxter of California»', '2 900 руб.')
+  +product(2, 'Увлажняющий кондиционер Baxter of California', 'Увлажняющий кондиционер', '«Baxter of California»', '750 руб.')
+  +product(3, 'Гель для волос SUAVECITO', 'Гель для волос', '«SUAVECITO»', '290 руб.')
+  +product(4, 'Глина для укладки волос American crew', 'Глина для укладки волос', '«American crew»', '500 руб.')
+  +product(5, 'Гель для волос AMERICAN CREW', 'Гель для волос', '«AMERICAN CREW»', '300 руб.')
+  +product(6, 'Набор для бритья Baxter of California', 'Набор для бритья', '«Baxter of California»', '3 900 руб.')
+
+  ul.pagination
+    - for (var i = 1; i < 5; i++)
+        li(class={'pagination__item--active': i === 1}).pagination__item= i

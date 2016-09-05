@@ -1,0 +1,12 @@
+.filters {
+  float: left;
+  width: $filters-width;
+  &__type {
+    margin-bottom: 50px;
+  }
+  &__type-item {
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+}

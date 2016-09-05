@@ -1,0 +1,19 @@
+extends blocks/layout
+block content
+  - var currentUrl = '/shop';
+  include blocks/page-header/page-header
+  main.container.shop-item
+    h1.page-title Набор для путешествий «Baxter of California»
+    ul.breadcrumbs
+      li.breadcrumbs__item
+        a(href='index.html').breadcrumbs__link Главная
+      li.breadcrumbs__item
+        a(href='shop.html').breadcrumbs__link Магазин
+      li.breadcrumbs__item
+        a(href='shop.html').breadcrumbs__link Средства для ухода
+      li.breadcrumbs__item Набор для путешествий «Baxter of California»
+    div.row
+      include blocks/product-gallery/product-gallery
+      include blocks/product-details/product-details
+  include blocks/page-footer/page-footer
+  include blocks/modals

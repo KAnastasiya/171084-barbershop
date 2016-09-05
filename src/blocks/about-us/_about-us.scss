@@ -1,0 +1,14 @@
+.about-us {
+  font-size: 0;
+  h2 {
+    margin-bottom: 30px;
+  }
+  &__text {
+    display: inline-block;
+    width: 50%;
+    padding-right: 80px;
+
+    font-size: 14px;
+    vertical-align: top;
+  }
+}

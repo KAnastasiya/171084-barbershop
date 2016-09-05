@@ -1,0 +1,22 @@
+.product-gallery {
+  float: left;
+  width: $product-gallery-width;
+  &__image {
+    padding-bottom: 20px;
+
+    box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+  }
+  &__thumbnails {
+    font-size: 0;
+    line-height: 1;
+    &-item {
+      display: inline-block;
+      vertical-align: top;
+
+      box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+mixin filter-producer(i, name, chosen, disabled)
+  div.filters__type-item
+    input(type='checkbox', name='producer' + i, id='producer' + i, checked=chosen, disabled=disabled)
+    label(for='producer' + i)= name
+
+mixin filter-category(i, name, chosen, disabled)
+  div.filters__type-item
+    input(type='radio', name='category', id='category' + i, checked=chosen, disabled=disabled)
+    label(for='category' + i)= name
+
+aside.filters
+  form(action='https://echo.htmlacademy.ru', method='get').filters__form
+    fieldset.filters__type.filters__type--producer
+      legend Производители:
+      +filter-producer(1, 'Baxter of California', true, false)
+      +filter-producer(2, 'Mr Natty', false, true)
+      +filter-producer(3, 'Suavecito', true, true)
+      +filter-producer(4, 'Malin+Goetz', false, false)
+      +filter-producer(5, 'Murray’s', false, false)
+      +filter-producer(6, 'American Crew', true, false)
+
+    fieldset.filters__type.filters__type--category
+      legend Группы товаров:
+      +filter-category(1, 'Бритвенные принадлежности', false, true)
+      +filter-category(2, 'Средства для ухода', true, false)
+      +filter-category(3, 'Аксессуары', true, false)
+
+    button(type='submit').btn.btn--apply-filters Показать

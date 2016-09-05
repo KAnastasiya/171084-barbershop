@@ -1,0 +1,11 @@
+mixin price(service, price)
+  tr.prices__row
+    td.prices__service= service
+    td.prices__value= price
+
+section.prices
+  h2 Цены на услуги наших мастеров:
+  table.prices__table
+    +price('Стрижка', '1500 р.')
+    +price('Стрижка бороды', '500 р.')
+    +price('Накрутка усов', '350 р.')

@@ -1,0 +1,32 @@
+.product-details {
+  float: right;
+  width: 390px;
+  padding-top: 26px;
+  &__title {
+    @extend %clearfix;
+
+    margin-bottom: 30px;
+  }
+  &__available {
+    float: left;
+  }
+  &__code {
+    float: right;
+
+    color: #aeaeae;
+  }
+  &__descr {
+    margin-bottom: 35px;
+  }
+  &__composition {
+    &-list {
+      @extend %list;
+      li {
+        line-height: 24px;
+      }
+    }
+  }
+  .purchase {
+    margin-bottom: 60px;
+  }
+}

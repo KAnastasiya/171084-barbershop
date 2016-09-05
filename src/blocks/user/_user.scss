@@ -1,0 +1,19 @@
+.user {
+  float: right;
+  height: $page-header-height;
+  .btn--login-show {
+    @extend %nav-text;
+
+    padding-left: 50px;
+    &::before {
+      @extend .icon--login;
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: $padding-base;
+
+      transform: translateY(-50%);
+    }
+  }
+}

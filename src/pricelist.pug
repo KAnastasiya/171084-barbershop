@@ -1,0 +1,18 @@
+extends blocks/layout
+block content
+  - var currentUrl = '/pricelist';
+  include blocks/page-header/page-header
+  main.container
+    h1.page-title Прайс-лист
+    ul.breadcrumbs
+      li.breadcrumbs__item
+        a(href='index.html').breadcrumbs__link Главная
+      li.breadcrumbs__item Прайс-лист
+    div.pricelist__slogan
+      p Истинно мужская классика
+    div.pricelist__row
+      include blocks/used-product/used-product
+      include blocks/prices/prices
+    include blocks/about-us/about-us
+  include blocks/page-footer/page-footer
+  include blocks/modals

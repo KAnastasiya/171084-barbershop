@@ -1,0 +1,54 @@
+#login {
+  .modal__dialog {
+    width: 460px;
+    padding: 60px 80px;
+  }
+}
+
+.login-form {
+  &__row {
+    @extend %clearfix;
+
+    margin-top: $padding-base;
+  }
+  &__remember-me {
+    float: left;
+  }
+  &__forgot-password {
+    float: right;
+
+    color: #000;
+  }
+  input:not([type='checkbox']) {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-right: 40px;
+    + label {
+      @extend %sr-only;
+    }
+  }
+  .icon {
+    position: absolute;
+    top: 13px;
+    right: $input-padding;
+  }
+  &__login {
+    position: relative;
+    .icon {
+      @extend .icon--user;
+    }
+  }
+  &__password {
+    position: relative;
+    .icon {
+      @extend .icon--password;
+    }
+  }
+  &__controls {
+    margin-top: $padding-base;
+  }
+}
+
+.btn--login {
+  width: 100%;
+}

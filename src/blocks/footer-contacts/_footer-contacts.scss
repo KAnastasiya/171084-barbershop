@@ -1,0 +1,15 @@
+.footer-contacts {
+  @extend %footer-text;
+
+  display: inline-block;
+  margin: 58px 94px 20px 0;
+
+  vertical-align: middle;
+  &__title {
+    @extend %sr-only;
+  }
+  &__link {
+    font-size: $font-size-base;
+    color: #fff;
+  }
+}

@@ -1,0 +1,10 @@
+mixin thumbnails(image)
+  li.product-gallery__thumbnails-item
+    img(src='img/product-gallery/img/' + image + '.jpg', alt='thumbnails', width='140', height='149')
+
+div.product-gallery
+  img(src='img/product-gallery/img/product.jpg', alt='product', width='460', height='498').product-gallery__image
+  ul.product-gallery__thumbnails
+    +thumbnails(1)
+    +thumbnails(2)
+    +thumbnails(3)

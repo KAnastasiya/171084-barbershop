@@ -1,0 +1,8 @@
+.contacts {
+  @extend %index-column;
+  &__controls {
+    margin-top: 24px;
+
+    font-size: 0;
+  }
+}

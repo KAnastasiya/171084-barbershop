@@ -1,0 +1,16 @@
+extends blocks/layout
+block content
+  - var main = true;
+  include blocks/page-header/page-header
+  main.index
+    div.container
+      include blocks/index-logo/index-logo
+      include blocks/features/features
+      div.index-block
+        include blocks/news/news
+        include blocks/gallery/gallery
+      div.index-block
+        include blocks/contacts/contacts
+        include blocks/appointment/appointment
+  include blocks/page-footer/page-footer
+  include blocks/modals

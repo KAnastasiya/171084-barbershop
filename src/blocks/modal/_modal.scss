@@ -1,0 +1,46 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+
+  display: none;
+
+  background: rgba(0, 0, 0 ,0.4);
+  &--active {
+    display: block;
+  }
+  &__dialog {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f7f4f1 url('../img/bg-white-pattern.jpg') repeat top left;
+    box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+  }
+  &__header {
+    margin-bottom: 16px;
+  }
+}
+
+.btn--close {
+  @extend .icon--close;
+
+  position: absolute;
+  top: 10px;
+  right: -30px;
+
+  min-width: 21px;
+  height: 21px;
+  padding: 0;
+
+  background-color: transparent;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+  }
+}

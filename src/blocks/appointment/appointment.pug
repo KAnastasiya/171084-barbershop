@@ -1,0 +1,21 @@
+section.appointment
+  div.appointment__container
+    h2 Записаться
+    p.appointment__text Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
+    form(action='https://echo.htmlacademy.ru', method='post').appointment-form
+      div.form-row
+        div.form-field
+          input(type='date', name='date', placeholder='Дата', id='date')
+          label(for='date') Дата
+        div.form-field
+          input(type='text', name='time', placeholder='Время', id='time')
+          label(for='time') Время
+      div.form-row
+        div.form-field
+          input(type='text', name='name', placeholder='Ваше имя', id='name')
+          label(for='name') Ваше имя
+        div.form-field
+          input(type='tel', name='phone', placeholder='Телефон', id='phone')
+          label(for='phone') Телефон
+      div.appointment__controls
+        button(type='submit').btn.btn--appointment Отправить

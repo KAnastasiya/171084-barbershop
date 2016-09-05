@@ -1,0 +1,17 @@
+extends blocks/layout
+block content
+  - var currentUrl = '/shop';
+  include blocks/page-header/page-header
+  main.container
+    h1.page-title Средства для ухода
+    ul.breadcrumbs
+      li.breadcrumbs__item
+        a(href='index.html').breadcrumbs__link Главная
+      li.breadcrumbs__item
+        a(href='shop.html').breadcrumbs__link Магазин
+      li.breadcrumbs__item Средства для ухода
+    div.row
+      include blocks/filters/filters
+      include blocks/products/products
+  include blocks/page-footer/page-footer
+  include blocks/modals

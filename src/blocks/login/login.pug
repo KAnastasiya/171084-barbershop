@@ -1,0 +1,24 @@
+div.modal#login
+  div.modal__dialog
+    div.modal__header
+      h2 Личный кабинет
+      p Введите, пожалуйста, свой логин и пароль
+      button(type='button').btn.btn--close
+        span.icon-text Закрыть
+    div.modal__body
+      form(action='https://echo.htmlacademy.ru', method='post').login-form
+        div.login-form__login
+          input(type='text', placeholder='Логин', name='login', id='user-login')
+          label(for='user-login') Логин
+          div.icon.icon--user
+        div.login-form__password
+          input(type='password', placeholder='Пароль', name='password', id='password')
+          label(for='password') Пароль
+          div.icon.icon--password
+        div.login-form__row
+          div.login-form__remember-me
+            input(type='checkbox', name='remember-me', id='remember-me', checked)
+            label(for='remember-me') Запомните меня
+          a(href='#').login-form__forgot-password Я забыл пароль!
+        div.login-form__controls
+          button(type='submit').btn.btn--login Войти

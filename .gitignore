@@ -8,15 +8,5 @@ Thumbs.db
 *.ai
 *.pdf
 
-package.json
-gulpfile.js
-webpack.config.js
-webpack.config-uglify.js
-.eslintrc
-.eslintignore
-.csscomb.json
-
 .gulp-scss-cache/
 .sass-cache/
-src/
-preview/

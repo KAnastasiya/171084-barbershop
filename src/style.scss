@@ -1,0 +1,48 @@
+@import './common/scss/normalize';
+@import './common/scss/mixins';
+@import './common/scss/variables';
+@import './common/scss/extends';
+@import './common/scss/sprite';
+
+/* Common settings */
+@import './common/scss/common';
+@import './common/scss/breadcrumbs';
+@import './common/scss/form';
+@import './blocks/modal/modal';
+
+@import './blocks/page-header/page-header';
+@import './blocks/logo/logo';
+@import './blocks/page-navigation/page-navigation';
+@import './blocks/user/user';
+
+@import './blocks/page-footer/page-footer';
+@import './blocks/footer-contacts/footer-contacts';
+@import './blocks/social/social';
+@import './blocks/copyright/copyright';
+
+@import './blocks/login/login';
+@import './blocks/map/map';
+
+/* Index */
+@import './common/scss/index';
+@import './blocks/index-logo/index-logo';
+@import './blocks/features/features';
+@import './blocks/news/news';
+@import './blocks/gallery/gallery';
+@import './blocks/contacts/contacts';
+@import './blocks/work-time/work-time';
+@import './blocks/appointment/appointment';
+
+/* Shop */
+@import './blocks/filters/filters';
+@import './blocks/products/products';
+
+/* Product */
+@import './blocks/product-gallery/product-gallery';
+@import './blocks/product-details/product-details';
+
+/* Pricelist */
+@import './common/scss/pricelist';
+@import './blocks/used-product/used-product';
+@import './blocks/prices/prices';
+@import './blocks/about-us/about-us';

@@ -1,0 +1,19 @@
+#map {
+  .modal {
+    &__dialog {
+      width: 780px;
+      height: 574px;
+      padding: 7px;
+    }
+
+    &__header {
+      margin: 0;
+    }
+  }
+
+  iframe {
+    width: 766px;
+    height: 560px;
+    background-color: #aba9a7;
+  }
+}
