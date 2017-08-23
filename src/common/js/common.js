@@ -51,33 +51,10 @@ const modalMap = {
 /**
  * Set in forms users data, saved in localStorage
  */
-let _setSavedUserInfo = () =>ail) {
-    modalFeedback.userEmail.val(lastUserEmail);
-    _toggleFloatLabel(modalFeedback.userEmail);
-  }
-};
+const _setSavedUserInfo = () => {
+  const lastLogin = localStorage.getItem('login');
 
-/**
- * Set focus in first empty forms field
- */
-let _setFocusInFirstEmptyField = () => {
-  $.each(modalFeedback.fields, (index, elem) => {
-    let element = $(elem);
-    if(!element.val()) {
-      element.focus();
-      return false;
-    }
-  });
-};
-
-/**
- * Show modal function
- * @param  {Element} modal
- */
-let _showModal  {
-  let lastLogin = localStorage.getItem('login');
-
-  if(lastLogin) {
+  if (lastLogin) {
     modalLogin.login.value = lastLogin;
   }
 };
@@ -85,21 +62,23 @@ let _showModal  {
 /**
  * Set focus in first empty forms field
  */
-let _setFocusInFirstEmptyField = () => {
+const _setFocusInFirstEmptyField = () => {
   for(let i = 0; i < modalLogin.fields.length; i++) {
     if(!modalLogin.fields[i].value) {
       modalLogin.fields[i].focus();
       return false;
     }
   }
+  return true;
 };
 
 /**
  * Show modal function
  * @param  {Element} modal
  */
-let _showModal = (modal) => {
+const _showModal = (modal) => {
   modal.classList.add('modal--active');
+
   let width = window.getComputedStyle(window.document.body).width;
   window.document.body.style.width = width;
   page.classList.add('lock');
@@ -114,7 +93,7 @@ let _showModal = (modal) => {
  * Hide modal function
  * @param  {Element} modal
  */
-let _hideModal = (modal) => {
+const _hideModal = (modal) => {
   modal.classList.remove('modal--active');
   page.classList.remove('lock');
 
@@ -131,7 +110,7 @@ let _hideModal = (modal) => {
  * @param  {Element} modal
  * @param  {Object} event
  */
-let _onShowClick = (modal) => {
+const _onShowClick = (modal) => {
   return function(event) {
     event.preventDefault();
     _showModal(modal);
@@ -142,7 +121,7 @@ let _onShowClick = (modal) => {
  * Handler for clicking on button 'Hide modal window'
  * @param  {Element} modal
  */
-let _onCloseClick = (modal) => {
+const _onCloseClick = (modal) => {
   return function() {
     _hideModal(modal);
   };
@@ -153,7 +132,7 @@ let _onCloseClick = (modal) => {
  * @param  {Element} modal
  * @param  {Object} event
  */
-let _onOverlayClick = (modal) => {
+const _onOverlayClick = (modal) => {
   return function(event) {
     if (event.target === event.currentTarget) {
       window.document.body.style.width = '';
@@ -165,7 +144,7 @@ let _onOverlayClick = (modal) => {
 /**
  * Handler for clicking Escape
  */
-let _onEscapeDown = () => {
+const _onEscapeDown = () => {
   if (event.keyCode === escapeCode) {
     window.document.body.style.width = '';
     _hideModal(modalLogin.window);
@@ -176,7 +155,7 @@ let _onEscapeDown = () => {
 /**
  * Handler for submit login button click
  */
-let _onSubmitClick = function(event) {
+const _onSubmitClick = (event) => {
   for(let i = 0; i < modalLogin.fields.length; i++) {
     if(!modalLogin.fields[i].value) {
       event.preventDefault();
@@ -193,7 +172,7 @@ let _onSubmitClick = function(event) {
 /**
  * Handler for submit appointment button click
  */
-let _onSubmitAppointmentClick = function(event) {
+const _onSubmitAppointmentClick = (event) => {
   for(let i = 0; i < appointment.fields.length; i++) {
     if(!appointment.fields[i].value) {
       event.preventDefault();

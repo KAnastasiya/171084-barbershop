@@ -4,6 +4,6 @@
   vertical-align: top;
   width: {{px.width}};
   height: {{px.height}};
-  background: url(../icon/{{{escaped_image}}}) no-repeat {{px.offset_x}} {{px.offset_y}};
+  background: url({{{escaped_image}}}) no-repeat {{px.offset_x}} {{px.offset_y}};
 }
 {{/sprites}}

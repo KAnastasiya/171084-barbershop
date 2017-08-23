@@ -64,7 +64,9 @@ img {
 }
 
 main {
-  background: #f7f4f1 url('../img/bg-white-pattern.jpg') repeat top left;
+  min-height: calc(100vh - #{$page-header-height} - #{$page-footer-height});
+  background: #f7f4f1 url('../img/bg-white-pattern.jpg') repeat center;
+  background-size: cover;
   &.index {
     padding-top: 60px;
 
