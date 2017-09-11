@@ -8,7 +8,7 @@
 
   display: none;
 
-  background: rgba(0, 0, 0 ,0.4);
+  background: rgba(0, 0, 0, 0.4);
   &--active {
     display: block;
   }
@@ -18,7 +18,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #f7f4f1 url('../img/bg-white-pattern.jpg') repeat top left;
+    background: #f7f4f1 url('img/bg-white-pattern.jpg') repeat top left;
     box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
   }
   &__header {
